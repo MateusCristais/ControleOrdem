@@ -66,6 +66,10 @@ public class Fornecedor implements Serializable{
     
     @OneToMany(mappedBy = "fornecedor")
     private List<FornecedorPeca> lstFornecedorPeca;
+    
+    @ManyToOne
+    @JoinColumn(name = "usuario")
+    private Usuario usuario;
 
     /**
      * @return the idFornecedor
@@ -261,6 +265,20 @@ public class Fornecedor implements Serializable{
      */
     public void setLstFornecedorPeca(List<FornecedorPeca> lstFornecedorPeca) {
         this.lstFornecedorPeca = lstFornecedorPeca;
+    }
+
+    /**
+     * @return the usuario
+     */
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    /**
+     * @param usuario the usuario to set
+     */
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 
 }

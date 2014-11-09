@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
@@ -28,6 +30,10 @@ public class Cliente implements Serializable{
     
     @Column(name = "obs")
     private String obs;
+    
+    @ManyToOne
+    @JoinColumn(name = "usuario")
+    private Usuario usuario;
 
     /**
      * @return the idCliente
@@ -55,6 +61,20 @@ public class Cliente implements Serializable{
      */
     public void setObs(String obs) {
         this.obs = obs;
+    }
+
+    /**
+     * @return the usuario
+     */
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    /**
+     * @param usuario the usuario to set
+     */
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
     
 }

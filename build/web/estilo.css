@@ -1,0 +1,374 @@
+/* ESTILO DO MENU FIXO */
+#jsddm{
+    margin: 0;
+    margin-left: 20px;
+    padding: 0;
+}
+#jsddm li{
+    float: left;
+    list-style: none;
+    font: 16px Tahoma, Arial;
+    text-align: center; 
+}
+#jsddm li a{
+    display: block;
+    background: #999999;
+    padding: 5px 12px;
+    text-decoration: none;
+    border-right: 1px solid white;
+    width: 200px;
+    color: #EAFFED;
+    white-space: nowrap;
+}
+#jsddm li a:hover{
+    background: #24313C;
+}
+#jsddm li ul{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    visibility: hidden;
+    border-top: 1px solid white;
+    width: 225px;
+}
+#jsddm li ul li{
+    float: none;
+    display: inline;
+}
+#jsddm li ul li a{
+    width: auto;
+    background: #d1d1d1;
+    color: #24313C;
+}
+#jsddm li ul li a:hover{
+    background: #ccccff;
+}
+#corpo_login{
+    margin: 0px;
+    padding: 0px;
+    background-color: white;
+}
+#conteudo_login{
+    position: absolute;
+    width: 550px;
+    height: 287px;
+    left: 50%;
+    top: 50%;
+    margin-left: -275px;
+    margin-top: -143.5px;
+    background-image: url("imagens/01Login_04.jpg");
+    background-repeat: no-repeat;
+}
+#campos_login{
+    position: absolute;
+    left: 32%;
+    top: 27%;
+}
+#botao_login{
+    float: right;
+    width: 165px;
+    margin-top: -10px;
+    margin-right: 118px;
+}
+#cabecalho_login{
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 668px;
+    height: 205px;
+    left: 50%;
+    margin-left: -334px;
+    background-image:url("imagens/01Login_02.jpg");
+}
+#rodape_login{
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 279px;
+    height: 142px;
+    left: 75%;
+    top: 100%;
+    margin-left: -139.5px;
+    margin-top: -142px;
+    background-image:url("imagens/01Login_07.jpg");
+}
+#corpo_fixo{
+    margin: 0px;
+    padding: 0px;
+    background-color: white;
+}
+#conteudo_fixo{
+    position: absolute;
+    width: 950px;
+    height: 156px;
+    left: 50%;
+    top: 50%;
+    margin-left: -475px;
+    margin-top: -163.5px;
+}
+#conteudo_fixo2{
+    position: absolute;
+    width: 950px;
+    height: 156px;
+    left: 50%;
+    top: 50%;
+    margin-left: -475px;
+    margin-top: -163.5px;
+}
+
+#cabecalho_fixo{
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 950px;
+    height: 156px;
+    left: 50%;
+    margin-left: -475px;
+    background-image:url("imagens/menu_fixo.jpg");
+}
+#rodape_fixo{
+    background-color: #d1d1d1;
+    width: 100%;
+    height: 20px;
+    float: left;
+    margin-top: 55%;
+}
+#rodape_fixo2{
+    background-color: #d1d1d1;
+    width: 100%;
+    height: 20px;
+    float: left;
+    margin-top: 70%;
+}
+#rodape_versao{
+    margin-left: 20%;
+    width: 150px;
+    height: 25px;
+    float: left;
+}
+#rodape_usuario{
+    width: 350px;
+    height: 25px;
+    float: left;
+}
+#rodape_horario{
+    width: 400px;
+    height: 25px;
+    float: left;
+}
+#botao_enviar{
+    color: transparent; 
+    background-color: transparent; 
+    border: 0px; 
+    background-image: url('imagens/entrar.png'); 
+    background-repeat: no-repeat; 
+    width: 80px; 
+    height: 32px; 
+    margin: 0px; 
+    padding: 0px;
+}
+#botao_limpar{
+    color: transparent; 
+    background-color: transparent; 
+    border: 0px; 
+    background-image: url('imagens/limpar.png'); 
+    background-repeat: no-repeat; 
+    width: 80px; 
+    height: 32px; 
+    margin: 0px; 
+    padding: 0px;
+}
+h1{
+    font-family: "Arial";
+    font-size: large;
+}
+#cabecalho_clientes{
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 950px;
+    height: 156px;
+    left: 100%;
+    margin-top: 10px;
+    margin-left: -475px;
+    background-image:url("imagens/cabecalho_clientes.png");
+}
+#cabecalho_fornecedores{
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 950px;
+    height: 156px;
+    left: 100%;
+    margin-top: 10px;
+    margin-left: -475px;
+    background-image:url("imagens/cabecalho_fornecedores.png");
+}
+#cabecalho_funcionarios{
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 950px;
+    height: 156px;
+    left: 100%;
+    margin-top: 10px;
+    margin-left: -475px;
+    background-image:url("imagens/cabecalho_funcionarios.png");
+}
+#cabecalho_pecas{
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 950px;
+    height: 156px;
+    left: 100%;
+    margin-top: 10px;
+    margin-left: -475px;
+    background-image:url("imagens/cabecalho_pecas.png");
+}
+#cabecalho_servicos{
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 950px;
+    height: 156px;
+    left: 100%;
+    margin-top: 10px;
+    margin-left: -475px;
+    background-image:url("imagens/cabecalho_servicos.png");
+}
+#cabecalho_entradaMercadoria{
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 950px;
+    height: 156px;
+    left: 100%;
+    margin-top: 10px;
+    margin-left: -475px;
+    background-image:url("imagens/cabecalho_entradamercadorias.png");
+}
+#cabecalho_orcamentos{
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 950px;
+    height: 156px;
+    left: 100%;
+    margin-top: 10px;
+    margin-left: -475px;
+    background-image:url("imagens/cabecalho_orcamentos.png");
+}
+#cabecalho_Cadclientes{
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 950px;
+    height: 156px;
+    left: 100%;
+    margin-top: 10px;
+    margin-left: -475px;
+    background-image:url("imagens/cabecalho_Cadclientes.png");
+}
+#cabecalho_Cadfornecedores{
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 950px;
+    height: 156px;
+    left: 100%;
+    margin-top: 10px;
+    margin-left: -475px;
+    background-image:url("imagens/cabecalho_Cadfornecedores.png");
+}
+#cabecalho_Cadfuncionarios{
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 950px;
+    height: 156px;
+    left: 100%;
+    margin-top: 10px;
+    margin-left: -475px;
+    background-image:url("imagens/cabecalho_Cadfuncionarios.png");
+}
+#cabecalho_Cadpecas{
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 950px;
+    height: 156px;
+    left: 100%;
+    margin-top: 10px;
+    margin-left: -475px;
+    background-image:url("imagens/cabecalho_Cadpecas.png");
+}
+#cabecalho_Cadservicos{
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 950px;
+    height: 156px;
+    left: 100%;
+    margin-top: 10px;
+    margin-left: -475px;
+    background-image:url("imagens/cabecalho_Cadservicos.png");
+}
+#cabecalho_CadentradaMercadorias{
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 950px;
+    height: 156px;
+    left: 100%;
+    margin-top: 10px;
+    margin-left: -475px;
+    background-image:url("imagens/cabecalho_Cadentradamercadorias.png");
+}
+#cabecalho_Cadorcamentos{
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 950px;
+    height: 156px;
+    left: 100%;
+    margin-top: 10px;
+    margin-left: -475px;
+    background-image:url("imagens/cabecalho_Cadorcamentos.png");
+}
+#combobox{
+    width: 250px;
+    height: 32px;
+    margin-top: -5px;
+}
+#comboboxCliente{
+    width: 100px;
+    height: 21px;
+}
+#comboboxServico{
+    width: 100px;
+    height: 21px;
+}
+#comboboxPeca{
+    width: 100px;
+    height: 21px;
+}
+#campo_pesquisa{
+    width: 610px;
+    height: 25px;
+}
+#botao_pesquisar{
+    margin-bottom: -8px
+}
+#tabConsulta{
+    width: 100%;
+    border: 1px solid #24313C;
+}
+#tabConsulta th{
+    background-color: #d7d7d7;
+    text-align: center;
+    border: 0px solid #000;
+}
+#tabConsulta tr{
+    background-color: #d7d7d7;
+    text-align: center;
+    border: 0px solid #000;
+}
+#tabConsulta td{
+    background-color: #e4e4e4;
+    text-align: center;
+    border: 0px solid #000;
+}
+#cadastros{
+    width: 600px;
+}
+#incluir{
+    margin-bottom: -12px;
+    margin-left: 26px;
+}
+#centralizados input{
+    text-align: center;
+}

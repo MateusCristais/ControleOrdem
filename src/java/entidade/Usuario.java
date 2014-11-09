@@ -31,6 +31,9 @@ public class Usuario implements Serializable{
     @Column(name = "logradouro")
     private String logradouro;
     
+    @Column(name = "cep")
+    private String cep;
+    
     @Column(name = "numero")
     private Integer numero;
     
@@ -45,9 +48,21 @@ public class Usuario implements Serializable{
     
     @Column(name = "email")
     private String email;
+    
+    @Column(name = "usuario")
+    private String usuario;
+    
+    @Column(name = "senha")
+    private String senha;
         
     @OneToMany(mappedBy = "usuario")
     private List<Telefone> lstTelefone;
+    
+    @OneToMany(mappedBy = "usuario")
+    private List<Cliente> lstCliente;
+    
+    @OneToMany(mappedBy = "usuario")
+    private List<Fornecedor> lstFornecedor;
 
     /**
      * @return the idUsuario
@@ -201,6 +216,76 @@ public class Usuario implements Serializable{
      */
     public void setLstTelefone(List<Telefone> lstTelefone) {
         this.lstTelefone = lstTelefone;
+    }
+
+    /**
+     * @return the usuario
+     */
+    public String getUsuario() {
+        return usuario;
+    }
+
+    /**
+     * @param usuario the usuario to set
+     */
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+
+    /**
+     * @return the senha
+     */
+    public String getSenha() {
+        return senha;
+    }
+
+    /**
+     * @param senha the senha to set
+     */
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    /**
+     * @return the lstCliente
+     */
+    public List<Cliente> getLstCliente() {
+        return lstCliente;
+    }
+
+    /**
+     * @param lstCliente the lstCliente to set
+     */
+    public void setLstCliente(List<Cliente> lstCliente) {
+        this.lstCliente = lstCliente;
+    }
+
+    /**
+     * @return the lstFornecedor
+     */
+    public List<Fornecedor> getLstFornecedor() {
+        return lstFornecedor;
+    }
+
+    /**
+     * @param lstFornecedor the lstFornecedor to set
+     */
+    public void setLstFornecedor(List<Fornecedor> lstFornecedor) {
+        this.lstFornecedor = lstFornecedor;
+    }
+
+    /**
+     * @return the cep
+     */
+    public String getCep() {
+        return cep;
+    }
+
+    /**
+     * @param cep the cep to set
+     */
+    public void setCep(String cep) {
+        this.cep = cep;
     }
     
     

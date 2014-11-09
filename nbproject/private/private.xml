@@ -3,14 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Mateus/Documents/NetBeansProjects/ControleOS/src/java/entidade/OSServico.java</file>
-            <file>file:/C:/Users/Mateus/Documents/NetBeansProjects/ControleOS/src/java/entidade/Servico.java</file>
-            <file>file:/C:/Users/Mateus/Documents/NetBeansProjects/ControleOS/src/java/entidade/OS.java</file>
-            <file>file:/C:/Users/Mateus/Documents/NetBeansProjects/ControleOS/src/java/entidade/Telefone.java</file>
-            <file>file:/C:/Users/Mateus/Documents/NetBeansProjects/ControleOS/src/java/dao/SessionFactoryUtil.java</file>
-            <file>file:/C:/Users/Mateus/Documents/NetBeansProjects/ControleOS/src/java/entidade/Peca.java</file>
-            <file>file:/C:/Users/Mateus/Documents/NetBeansProjects/ControleOS/src/java/entidade/OSPeca.java</file>
-            <file>file:/C:/Users/Mateus/Documents/NetBeansProjects/ControleOS/src/java/entidade/Cliente.java</file>
+            <file>file:/C:/Users/Mateus/Documents/GitHub/ControleOS/web/logar.jsp</file>
+            <file>file:/C:/Users/Mateus/Documents/GitHub/ControleOS/web/clientesPesquisa.jsp</file>
+            <file>file:/C:/Users/Mateus/Documents/GitHub/ControleOS/web/clientes.jsp</file>
+            <file>file:/C:/Users/Mateus/Documents/GitHub/ControleOS/web/menuprincipal.jsp</file>
+            <file>file:/C:/Users/Mateus/Documents/GitHub/ControleOS/web/index.jsp</file>
+            <file>file:/C:/Users/Mateus/Documents/GitHub/ControleOS/web/clientesNovo.jsp</file>
+            <file>file:/C:/Users/Mateus/Documents/GitHub/ControleOS/web/clientesNovoSalvar.jsp</file>
+            <file>file:/C:/Users/Mateus/Documents/GitHub/ControleOS/src/java/dao/ClienteDao.java</file>
+            <file>file:/C:/Users/Mateus/Documents/GitHub/ControleOS/src/java/dao/UsuarioDao.java</file>
         </group>
     </open-files>
 </project-private>
