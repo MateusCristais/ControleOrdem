@@ -14,6 +14,20 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="estilo.css">
+        
+        <script>
+            function formatar(mascara, documento){
+                var i = documento.value.length;
+                var saida = mascara.substring(0,1);
+                var texto = mascara.substring(i);
+                
+                if(texto.substring(0,1) != saida){
+                    documento.value += texto.substring(0,1);
+                }
+            }
+            
+        </script>
+        
     </head>
 
     <body id="corpo_fixo">
@@ -25,47 +39,47 @@
             <div style="float:left; margin-left: 20px;">
                 <h1>Cadastro de Fornecedor</h1>
                 <table id="cadastros">
-                    <form method="POST" action="fornecedoresNovoSalvar.jsp">
+                    <form method="POST" action="FornecedorSalvar?tipo=${param.tipo}&codigo=${param.codigo}">
+                        <tr><td style="color:red">${mensagem}</td></tr>
+                        <input type="hidden" id="tipo" name="tipo" value="${param.tipo}" disabled="true" />
                         <tr>
-                            <td>Código: </td>
-                            <td><input type="number" name="codigo" disabled="true" /></td>
+                            <td style="text-align: right" id="textoIdentificador">Código: </td>
+                            <td><input type="number" id="codigo" name="codigo" value="${param.codigo}" disabled="true" /></td>
                         </tr>
                         <tr>
-                            <td>Nome / Razão Social: </td>
-                            <td><input type="text" name="nomeCompleto" style="width: 100%" /></td>
+                            <td style="text-align: right" width="500"  id="textoIdentificador">Nome / Razão Social: </td>
+                            <td><input type="text" required="required" name="nomeCompleto" id="nomeCompleto" value="${param.nomeCompleto}" style="width: 100%" /></td>
                         </tr>
                         <tr>
-                            <td>Apelido / Fantasia: </td>
-                            <td><input type="text" name="apelido" style="width: 100%" /></td>
+                            <td style="text-align: right" id="textoIdentificador">CPF / CNPJ: </td>
+                            <td><input type="text" required="required" maxlength="14" onkeypress="formatar('###.###.###-##', this)" name="cpf" value="${param.cpf}" /></td>
                         </tr>
                         <tr>
-                            <td>CPF / CNPJ: </td>
-                            <td><input type="text" name="cpf" /></td>
+                            <td style="text-align: right" id="textoIdentificador" width="300" >Nome Fantasia/ Apelido: </td>
+                            <td><input type="text" required="required" maxlength="120" name="fantasia" value="${param.fantasia}" style="width: 100%" /></td>
                         </tr>
                         <tr>
-                            <td>RG / Inscr.Est.: </td>
-                            <td><input type="text" name="rg" /></td>
+                            <td style="text-align: right" id="textoIdentificador">RG / Inscr.Est.: </td>
+                            <td><input type="text" name="rg" value="${param.rg}"/></td>
                         </tr>
                         <tr>
-                            <td>Endereço: </td>
-                            <td><input type="text" name="endereco" style="width: 100%" /></td>
+                            <td style="text-align: right" id="textoIdentificador">Endereço: </td>
+                            <td><input type="text" name="endereco" value="${param.endereco}" required="required" style="width: 100%" /></td>
+                            <td style="text-align: right" width="300" id="textoIdentificador">Número: </td>
+                            <td><input type="text" required="required" maxlength="5" pattern="[0-9]+$" name="numero" value="${param.numero}" width="25"/></td>
                         </tr>
                         <tr>
-                            <td>Número: </td>
-                            <td><input type="text" name="numero" /></td>
+                            <td style="text-align: right" id="textoIdentificador">Bairro: </td>
+                            <td><input type="text" name="bairro" value="${param.bairro}" required="required"/></td>
                         </tr>
                         <tr>
-                            <td>Bairro: </td>
-                            <td><input type="text" name="bairro" /></td>
+                            <td style="text-align: right" id="textoIdentificador">CEP: </td>
+                            <td><input type="text" required="required" value="${param.cep}" maxlength="10" onkeypress="formatar('##.###-###', this)" pattern="[0-9]{2}\.[0-9]{3}\-[0-9]{3}$" name="cep" /></td>
                         </tr>
                         <tr>
-                            <td>CEP: </td>
-                            <td><input type="text" name="cep" /></td>
-                        </tr>
-                        <tr>
-                            <td>UF: </td>
-                            <td><select name="uf" style="width: 173px" >
-                                    <option></option>
+                            <td style="text-align: right" id="textoIdentificador">UF: </td>
+                            <td><select name="uf" required="required" style="width: 173px" >
+                                    <option selected="selected" value="${param.uf}">${param.uf}</option>
                                     <option value="AC">AC</option>
                                     <option value="AL">AL</option>
                                     <option value="AP">AP</option>
@@ -78,7 +92,7 @@
                                     <option value="MA">MA</option>
                                     <option value="MT">MT</option>
                                     <option value="MS">MS</option>
-                                    <option value="MG">MG</option>
+                                    <option value="MG">MG</option> 
                                     <option value="PA">PA</option>
                                     <option value="PB">PB</option>
                                     <option value="PR">PR</option>
@@ -97,33 +111,29 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Cidade: </td>
-                            <td><input type="text" name="cidade" /></td>
+                            <td style="text-align: right" id="textoIdentificador">Cidade: </td>
+                            <td><input type="text" required="required" name="cidade" value="${param.cidade}"/></td>
                         </tr>
                         <tr>
-                            <td>E-mail: </td>
-                            <td><input type="text" name="email" style="width: 100%" /></td>
+                            <td style="text-align: right" id="textoIdentificador">E-mail: </td>
+                            <td><input type="text" required="required" name="email" style="width: 100%" value="${param.email}"/></td>
                         </tr>
                         <tr>
-                            <td>Telefone 1: </td>
-                            <td><input type="text" name="telefone1ddd" size="5" maxlength="3" /> <input type="text" name="telefone1" maxlength="10" /></td>
+                            <td style="text-align: right" id="textoIdentificador">Telefone: </td>
+                            <td><input type="numeric" name="telefone" value="${param.telefone}" maxlength="12" onkeypress="formatar('## ####-####', this)"/></td>
+                            <td style="text-align: right" id="textoIdentificador">Celular: </td>
+                            <td><input type="numeric" name="celular" value="${param.celular}" maxlength="14" onkeypress="formatar('## # ####-####', this)"/></td>
                         </tr>
                         <tr>
-                            <td>Telefone 2: </td>
-                            <td><input type="text" name="telefone2ddd" size="5" maxlength="3" /> <input type="text" name="telefone2" maxlength="10" /></td>
-                        </tr>
-                        <tr>
-                            <td>Telefone 3: </td>
-                            <td><input type="text" name="telefone3ddd" size="5" maxlength="3" /> <input type="text" name="telefone3" maxlength="10" /></td>
-                        </tr>
-                        <tr>
-                            <td>Observação: </td>
-                            <td><textarea name="observacao" rows="3" cols="50"></textarea></td>
+                            <td style="text-align: right" id="textoIdentificador">Observação: </td>
+                            <td><textarea name="obs" value="${param.obs}" rows="5" cols="27">${param.obs}</textarea></td>
                         </tr>
                         <tr>
                             <td colspan="2">
-                                <a href="#" title="Salvar"><img src="imagens/salvar.png" alt="Salvar" title="Salvar" /></a> 
-                                <a href="#" title="Voltar"><img src="imagens/voltar.png" alt="Voltar" title="Voltar" /></a> 
+                                <div>
+                                    <a href="fornecedores.jsp?palavra=" title="Voltar"><img src="imagens/voltar.png" alt="Voltar" title="Voltar" /></a>
+                                    <input type="submit" value="" id="botao_salvar" />
+                                </div>
                             </td>
                         </tr>
                     </form>

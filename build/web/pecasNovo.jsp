@@ -14,6 +14,18 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="estilo.css">
+        
+        <script>
+            function formatar(mascara, documento){
+                var i = documento.value.length;
+                var saida = mascara.substring(0,1);
+                var texto = mascara.substring(i);
+                
+                if(texto.substring(0,1) != saida){
+                    documento.value += texto.substring(0,1);
+                }
+            }
+        </script>
     </head>
 
     <body id="corpo_fixo">
@@ -25,18 +37,20 @@
             <div style="float:left; margin-left: 20px;">
                 <h1>Cadastro de Peça</h1>
                 <table id="cadastros">
-                    <form method="POST" action="pecasNovoSalvar.jsp">
+                    <form method="POST" action="PecaSalvar.jsp?tipo=${param.tipo}&codigo=${param.codigo}">
+                        <tr><td style="color:red">${mensagem}</td></tr>
+                        <input type="hidden" id="tipo" name="tipo" value="${param.tipo}" disabled="true" />
                         <tr>
-                            <td>Código: </td>
-                            <td><input type="number" name="codigo" disabled="true" /></td>
+                            <td style="text-align: right" id="textoIdentificador">Código: </td>
+                            <td><input type="number" name="codigo" disabled="true" style="width:50%;" /></td>
                         </tr>
                         <tr>
-                            <td>Descrição: </td>
+                            <td style="text-align: right" id="textoIdentificador">Descrição: </td>
                             <td><input type="text" name="descricao" style="width: 100%" /></td>
                         </tr>
                         <tr>
-                            <td>Fornecedor: </td>
-                            <td><select name="fornecedor" > 
+                            <td style="text-align: right" id="textoIdentificador">Fornecedor: </td>
+                            <td><select name="fornecedor" style="width:50%;"> 
                                     <option></option>
                                     <option>Fornecedor 1</option>
                                     <option>Fornecedor 2</option>
@@ -45,21 +59,23 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Referência: </td>
-                            <td><input type="text" name="referencia" /></td>
+                            <td style="text-align: right" id="textoIdentificador">Referência: </td>
+                            <td><input type="text" name="referencia" style="width:50%;"/></td>
                         </tr>
                         <tr>
-                            <td>Preço Sugerido: </td>
-                            <td><input type="number" name="valor" style="width: 100%" /></td>
+                            <td style="text-align: right" id="textoIdentificador">Preço Sugerido: </td>
+                            <td><input type="number" name="valor" style="width: 25%" /></td>
                         </tr>
                         <tr>
-                            <td>Ficha Técnica: </td>
-                            <td><textarea name="fichaTecnica" rows="3" cols="50"></textarea></td>
+                            <td style="text-align: right" id="textoIdentificador">Ficha Técnica: </td>
+                            <td><textarea name="fichaTecnica" rows="5" cols="50" style="width:100%;"></textarea></td>
                         </tr>
                         <tr>
                             <td colspan="2">
-                                <a href="#" title="Salvar"><img src="imagens/salvar.png" alt="Salvar" title="Salvar" /></a> 
-                                <a href="#" title="Voltar"><img src="imagens/voltar.png" alt="Voltar" title="Voltar" /></a> 
+                                <div>
+                                    <a href="pecas.jsp?palavra=" title="Voltar"><img src="imagens/voltar.png" alt="Voltar" title="Voltar" /></a>
+                                    <input type="submit" value="" id="botao_salvar" />
+                                </div>
                             </td>
                         </tr>
                     </form>

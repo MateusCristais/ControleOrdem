@@ -1,9 +1,6 @@
 package entidade;
 
 import dao.SessionFactoryUtil;
-import java.math.BigInteger;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.util.List;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
@@ -22,20 +19,9 @@ public class Funcoes {
     public boolean verificaLogin(String usuario, String senha) {
         Session s = SessionFactoryUtil.openSession(SessionFactoryUtil.openConnection());
         s.beginTransaction();
-        /*
-         // Consulta criptografada
-         String sencrip = "";
-         try {
-         MessageDigest md = MessageDigest.getInstance("MD5");
-         BigInteger hash = new BigInteger(1, md.digest(senha.getBytes()));
-         sencrip = hash.toString(16);
-         } catch (NoSuchAlgorithmException ex) {
-         ex.printStackTrace();
-         }
-         */
 
         Criteria c = s.createCriteria(Usuario.class);
-        c.add(Restrictions.eq("usuario", usuario));
+        c.add(Restrictions.eq("nomeUsuario", usuario));
         //  c.add(Restrictions.eq("senha", sencrip));
         c.add(Restrictions.eq("senha", senha));
         List<Usuario> lstUsuario = (List<Usuario>) c.list();
@@ -55,19 +41,9 @@ public class Funcoes {
         Session s = SessionFactoryUtil.openSession(SessionFactoryUtil.openConnection());
         s.beginTransaction();
         String nome = "";
-        /*
-         // Consulta criptografada
-         String sencrip = "";
-         try {
-         MessageDigest md = MessageDigest.getInstance("MD5");
-         BigInteger hash = new BigInteger(1, md.digest(senha.getBytes()));
-         sencrip = hash.toString(16);
-         } catch (NoSuchAlgorithmException ex) {
-         ex.printStackTrace();
-         }*/
 
         Criteria c = s.createCriteria(Usuario.class);
-        c.add(Restrictions.eq("usuario", usuario));
+        c.add(Restrictions.eq("nomeUsuario", usuario));
         c.add(Restrictions.eq("senha", senha));
         List<Usuario> lstUsuario = (List<Usuario>) c.list();
 

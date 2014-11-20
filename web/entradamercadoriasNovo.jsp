@@ -28,11 +28,11 @@
                     <form method="POST" action="entradamercadoriasNovoSalvar.jsp">
                         <tr>
                             <td>Nota Fiscal: </td>
-                            <td><input type="number" name="notaFiscal" /></td>
+                            <td><input type="number" name="notaFiscal" style="width:50%;"/></td>
                         </tr>
                         <tr>
                             <td>Fornecedor: </td>
-                            <td><select name="fornecedor" > 
+                            <td><select name="fornecedor" style="width:50%;"> 
                                     <option></option>
                                     <option>Fornecedor 1</option>
                                     <option>Fornecedor 2</option>
@@ -44,18 +44,17 @@
                             <td>Data: </td>
                             <td><input type="date" name="data" /></td>
                         </tr>
-                        <tr><td colspan="2"><p></p></td></tr>
                         <tr>
                             <td>Itens: </td>
                             <td id="centralizados">
-                                <select name="tipoItem" style="width: 173px">
+                                <select name="tipoItem" style="width:48%;">
                                     <option></option>
                                     <option>Código</option>
                                     <option>Descrição</option>
                                 </select>
-                                <input type="text" name="pesquisaItem" style="width: 329px" />
-                                Quantidade: <input type="number" name="qtde" value="1" style="width: 100px" />
-                                Valor Unitário: <input type="number" name="qtde" style="width: 100px" />
+                                <input type="text" name="pesquisaItem" style="width:51%;" />
+                                Quantidade: <input type="number" name="qtde" value="1" style="width:25%;" />
+                                Valor Unitário: <input type="number" name="qtde" style="width:25%;" />
                                 <a href="#" title="Incluir Item"><img src="imagens/incluir.png" id="incluir" alt="Incluir Item" title="Incluir Item" /></a>
                             </td>
                         </tr>
@@ -91,7 +90,7 @@
                         </tr>
                         <tr>
                             <td>Observação: </td>
-                            <td><textarea name="observacao" rows="3" cols="70   "></textarea></td>
+                            <td><textarea name="observacao" rows="5" cols="70" style="width:100%;"></textarea></td>
                         </tr>
                         <tr>
                             <td colspan="2">

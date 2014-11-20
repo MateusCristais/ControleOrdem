@@ -1,12 +1,10 @@
 package entidade;
 
 import java.io.Serializable;
-import java.util.List;
 import javax.persistence.*;
 
 @Entity
 @Table(name="usuario", schema="controle_os")
-@Inheritance(strategy = InheritanceType.JOINED)
 public class Usuario implements Serializable{
     
     @Id
@@ -49,20 +47,23 @@ public class Usuario implements Serializable{
     @Column(name = "email")
     private String email;
     
+    @Column(name = "telefone")
+    private String telefone;
+    
+    @Column(name = "celular")
+    private String celular;
+    
     @Column(name = "usuario")
-    private String usuario;
+    private String nomeUsuario;
     
     @Column(name = "senha")
     private String senha;
-        
-    @OneToMany(mappedBy = "usuario")
-    private List<Telefone> lstTelefone;
     
-    @OneToMany(mappedBy = "usuario")
-    private List<Cliente> lstCliente;
+    @Column(name = "obs")
+    private String obs;
     
-    @OneToMany(mappedBy = "usuario")
-    private List<Fornecedor> lstFornecedor;
+    @Column(name = "funcionario")
+    private Integer funcionario;
 
     /**
      * @return the idUsuario
@@ -205,31 +206,17 @@ public class Usuario implements Serializable{
     }
 
     /**
-     * @return the lstTelefone
-     */
-    public List<Telefone> getLstTelefone() {
-        return lstTelefone;
-    }
-
-    /**
-     * @param lstTelefone the lstTelefone to set
-     */
-    public void setLstTelefone(List<Telefone> lstTelefone) {
-        this.lstTelefone = lstTelefone;
-    }
-
-    /**
      * @return the usuario
      */
-    public String getUsuario() {
-        return usuario;
+    public String getNomeUsuario() {
+        return nomeUsuario;
     }
 
     /**
      * @param usuario the usuario to set
      */
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
+    public void setNomeUsuario(String nomeUsuario) {
+        this.nomeUsuario = nomeUsuario;
     }
 
     /**
@@ -247,34 +234,6 @@ public class Usuario implements Serializable{
     }
 
     /**
-     * @return the lstCliente
-     */
-    public List<Cliente> getLstCliente() {
-        return lstCliente;
-    }
-
-    /**
-     * @param lstCliente the lstCliente to set
-     */
-    public void setLstCliente(List<Cliente> lstCliente) {
-        this.lstCliente = lstCliente;
-    }
-
-    /**
-     * @return the lstFornecedor
-     */
-    public List<Fornecedor> getLstFornecedor() {
-        return lstFornecedor;
-    }
-
-    /**
-     * @param lstFornecedor the lstFornecedor to set
-     */
-    public void setLstFornecedor(List<Fornecedor> lstFornecedor) {
-        this.lstFornecedor = lstFornecedor;
-    }
-
-    /**
      * @return the cep
      */
     public String getCep() {
@@ -287,6 +246,60 @@ public class Usuario implements Serializable{
     public void setCep(String cep) {
         this.cep = cep;
     }
-    
-    
+
+    /**
+     * @return the obs
+     */
+    public String getObs() {
+        return obs;
+    }
+
+    /**
+     * @param obs the obs to set
+     */
+    public void setObs(String obs) {
+        this.obs = obs;
+    }
+
+    /**
+     * @return the funcionario
+     */
+    public Integer getFuncionario() {
+        return funcionario;
+    }
+
+    /**
+     * @param funcionario the funcionario to set
+     */
+    public void setFuncionario(Integer funcionario) {
+        this.funcionario = funcionario;
+    }
+
+    /**
+     * @return the telefone
+     */
+    public String getTelefone() {
+        return telefone;
+    }
+
+    /**
+     * @param telefone the telefone to set
+     */
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    /**
+     * @return the celular
+     */
+    public String getCelular() {
+        return celular;
+    }
+
+    /**
+     * @param celular the celular to set
+     */
+    public void setCelular(String celular) {
+        this.celular = celular;
+    }
 }

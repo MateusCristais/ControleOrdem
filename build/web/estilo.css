@@ -16,7 +16,7 @@
     padding: 5px 12px;
     text-decoration: none;
     border-right: 1px solid white;
-    width: 200px;
+    width: 207px;
     color: #EAFFED;
     white-space: nowrap;
 }
@@ -29,7 +29,7 @@
     position: absolute;
     visibility: hidden;
     border-top: 1px solid white;
-    width: 225px;
+    width: 232px;
 }
 #jsddm li ul li{
     float: none;
@@ -135,7 +135,7 @@
     width: 100%;
     height: 20px;
     float: left;
-    margin-top: 70%;
+    margin-top: 80%;
 }
 #rodape_versao{
     margin-left: 20%;
@@ -172,6 +172,17 @@
     background-repeat: no-repeat; 
     width: 80px; 
     height: 32px; 
+    margin: 0px; 
+    padding: 0px;
+}
+#botao_salvar{
+    color: transparent; 
+    background-color: transparent; 
+    border: 0px; 
+    background-image: url('imagens/salvar.png'); 
+    background-repeat: no-repeat; 
+    width: 90px; 
+    height: 36px; 
     margin: 0px; 
     padding: 0px;
 }
@@ -363,7 +374,7 @@ h1{
     border: 0px solid #000;
 }
 #cadastros{
-    width: 600px;
+    width: 800px;
 }
 #incluir{
     margin-bottom: -12px;
@@ -371,4 +382,18 @@ h1{
 }
 #centralizados input{
     text-align: center;
+}
+#consultaCli{
+    width: 890px;
+    position: absolute;
+    left: 50%;
+    margin-left: -445px;
+    text-align: right;
+    margin-top: 20px;
+}
+#consultaCli button{
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }

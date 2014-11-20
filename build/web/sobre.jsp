@@ -19,17 +19,17 @@
         <div id="cabecalho_fixo"></div>
         <div id="conteudo_fixo">
             <jsp:include page="menu_fixo.jsp" />
-            <div style="float:left; margin-left: 40px;">
+            <div style="float:left; margin-left: 22px;">
                 <br />
                 <b>Desenvolvido por:</b><br />
                 Felipe Henrique Ziliotti<br />
                 Marcos Rodrigo Belato<br />
                 Mateus Ferreira Oliveira<br />
-                Rafael Oliveira Fidelis<br />
+                Rafael Oliveira Fidelis<br /><br />
                 <b>Disciplina:</b><br />
-                Tópicos Especiais II - Heitor Cunha<br />
+                Tópicos Especiais II - Prof. Me. Heitor Cunha<br /><br />
                 <b>Curso:</b><br />
-                Ciência da Computação - 2014 - 8ºP<br />
+                Ciência da Computação - 2014 - 8º P<br />
             </div>
         </div>
         <div id="rodape_fixo">

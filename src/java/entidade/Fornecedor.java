@@ -8,8 +8,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
@@ -52,6 +50,9 @@ public class Fornecedor implements Serializable{
     @Column(name = "cidade")
     private String cidade;
     
+    @Column(name = "cep")
+    private String cep;
+    
     @Column(name = "uf")
     private String uf;
     
@@ -61,15 +62,14 @@ public class Fornecedor implements Serializable{
     @Column(name = "obs")
     private String obs;
     
-    @OneToMany(mappedBy = "fornecedor")
-    private List<Telefone> lstTelefone;
+    @Column(name = "telefone")
+    private String telefone;
+    
+    @Column(name = "celular")
+    private String celular;
     
     @OneToMany(mappedBy = "fornecedor")
     private List<FornecedorPeca> lstFornecedorPeca;
-    
-    @ManyToOne
-    @JoinColumn(name = "usuario")
-    private Usuario usuario;
 
     /**
      * @return the idFornecedor
@@ -240,20 +240,6 @@ public class Fornecedor implements Serializable{
     }
 
     /**
-     * @return the lstTelefone
-     */
-    public List<Telefone> getLstTelefone() {
-        return lstTelefone;
-    }
-
-    /**
-     * @param lstTelefone the lstTelefone to set
-     */
-    public void setLstTelefone(List<Telefone> lstTelefone) {
-        this.lstTelefone = lstTelefone;
-    }
-
-    /**
      * @return the lstFornecedorPeca
      */
     public List<FornecedorPeca> getLstFornecedorPeca() {
@@ -268,17 +254,44 @@ public class Fornecedor implements Serializable{
     }
 
     /**
-     * @return the usuario
+     * @return the telefone
      */
-    public Usuario getUsuario() {
-        return usuario;
+    public String getTelefone() {
+        return telefone;
     }
 
     /**
-     * @param usuario the usuario to set
+     * @param telefone the telefone to set
      */
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
 
+    /**
+     * @return the celular
+     */
+    public String getCelular() {
+        return celular;
+    }
+
+    /**
+     * @param celular the celular to set
+     */
+    public void setCelular(String celular) {
+        this.celular = celular;
+    }
+
+    /**
+     * @return the cep
+     */
+    public String getCep() {
+        return cep;
+    }
+
+    /**
+     * @param cep the cep to set
+     */
+    public void setCep(String cep) {
+        this.cep = cep;
+    }
 }

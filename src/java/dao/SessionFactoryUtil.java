@@ -1,10 +1,8 @@
 package dao;
 
-import entidade.Cliente;
 import entidade.Fornecedor;
 import entidade.FornecedorPeca;
 import entidade.Usuario;
-import entidade.Telefone;
 import entidade.OS;
 import entidade.OSServico;
 import entidade.Servico;
@@ -54,7 +52,6 @@ public class SessionFactoryUtil {
                 cfg.setProperty("hibernate.hbm2dll.auto", "validate");  
                 
                 //ENTIDADES
-                cfg.addAnnotatedClass(Cliente.class);
                 cfg.addAnnotatedClass(Fornecedor.class);
                 cfg.addAnnotatedClass(FornecedorPeca.class);
                 cfg.addAnnotatedClass(Funcionario.class);
@@ -63,7 +60,6 @@ public class SessionFactoryUtil {
                 cfg.addAnnotatedClass(OSServico.class);
                 cfg.addAnnotatedClass(Servico.class);
                 cfg.addAnnotatedClass(Peca.class);
-                cfg.addAnnotatedClass(Telefone.class);
                 cfg.addAnnotatedClass(Usuario.class);
                 //
                 

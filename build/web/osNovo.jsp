@@ -28,36 +28,36 @@
                     <table id="cadastros">                    
                         <tr>
                             <td>Número: </td>
-                            <td><input type="number" name="numero" disabled="true" /></td>
+                            <td><input type="number" name="numero" disabled="true" style="width:50%;" /></td>
                         </tr>
                         <tr>
                             <td>Cliente: </td>
                             <td>
-                                <select id="comboboxCliente" name="consultaCliente">
+                                <select id="comboboxCliente" name="consultaCliente" style="width:25%;">
                                     <option></option>
                                     <option>NOME</option>
                                     <option>CNPJ/CPF</option>
                                     <option>RG/IE</option>
                                 </select>
-                                <input type="text" name="cliente" style="width:323px;" />
+                                <input type="text" name="cliente" style="width:55%;" />
                                 <a href="#" title="Pesquisar"><img src="imagens/btn_pesquisar.png" alt="Pesquisar" title="Pesquisar"  id="botao_pesquisar" /></a>
                                 <a href="#" title="Incluir Cliente"><img src="imagens/incluir.png" alt="Incluir Cliente" title="Incluir Cliente" id="botao_pesquisar" /></a>
                             </td>
                         </tr>
                         <tr>
                             <td>Defeito Apontado: </td>
-                            <td><textarea name="defeitoApontado" rows="5" cols="75"></textarea></td>
+                            <td><textarea name="defeitoApontado" rows="5" cols="75" style="width:100%;"></textarea></td>
                         </tr>
                         <tr>
                             <td>Serviço: </td>
                             <td>
-                                <select id="comboboxServico" name="consultaServico">
+                                <select id="comboboxServico" name="consultaServico" style="width:25%;">
                                     <option></option>
                                     <option>CÓDIGO</option>
                                     <option>DESCRIÇÃO</option>
                                     <option>VALOR</option>
                                 </select>
-                                <input type="text" name="servico" style="width:354px;" />
+                                <input type="text" name="servico" style="width:60%;" />
                                 <a href="#" title="Incluir Serviço"><img src="imagens/incluir.png" alt="Incluir Serviço" title="Incluir Serviço" id="botao_pesquisar" /></a>
                             </td>
                         </tr>
@@ -87,13 +87,13 @@
                         <tr>
                             <td>Peças: </td>
                             <td>
-                                <select id="comboboxPeca" name="consultaServico">
+                                <select id="comboboxPeca" name="consultaServico" style="width:25%;">
                                     <option></option>
                                     <option>CÓDIGO</option>
                                     <option>DESCRIÇÃO</option>
                                     <option>VALOR</option>
                                 </select>
-                                <input type="text" name="peça" style="width:354px;" />
+                                <input type="text" name="peça" style="width:60%;" />
                                 <a href="#" title="Incluir Peça"><img src="imagens/incluir.png" alt="Incluir Peça" title="Incluir Peça" id="botao_pesquisar" /></a>
                             </td>
                         </tr>
@@ -122,21 +122,23 @@
                         </tr>
                         <tr style="text-align: right;"> 
                             <td>
-                                % Conclusão: <input type="text" name="conclusao" size="10" style="background-color: #e4e4e4" />
-                                Data Início: <input type="text" name="dtInicio" size="10" style="background-color: #e4e4e4" />
+                                <p align="right">
+                                    % Conclusão: <input type="text" name="conclusao" size="10" style="background-color: #e4e4e4" style="width:25%;" /><br>
+                                    Data Início: <input type="text" name="dtInicio" size="10" style="background-color: #e4e4e4" style="width:25%;" /><br>
+                                </p>
                             </td>
                             <td>
-                                Dias previstos para execução: <input type="text" title="Dias" name="diasExecucao" /> <br />
-                                Desconto (%): <input type="text" title="Desconto %" name="desconto" /> <br />
-                                Valor Total: <input type="text" title="Valor Total" name="vlTotal" /> <br />
+                                Dias previstos para execução: <input type="text" title="Dias" name="diasExecucao" style="width:25%;" /> <br />
+                                Desconto (%): <input type="text" title="Desconto %" name="desconto" style="width:25%;" /> <br />
+                                Valor Total: <input type="text" title="Valor Total" name="vlTotal" style="width:25%;" /> <br />
                             </td>
                         </tr>
                     </table>
-                    <table>
+                    <table style="width:890px;">
                         <tr>
                             <td style="width: 500px;">
                                 Histórico de eventos: <br />
-                                <textarea name="historicoEventos" rows="5" cols="74"></textarea>
+                                <textarea name="historicoEventos" rows="5" cols="74" style="width:100%;" ></textarea>
                             </td>
                             <td style="width: 100px; text-align: center;">
                                 % Conclusão: <input type="text" name="conclusao" size="10" style="background-color: #e4e4e4" />

@@ -13,7 +13,6 @@
     <body id="corpo_fixo">
         <div id="cabecalho_fixo"></div>
         <div id="conteudo_fixo">
-            <jsp:include page="menu_fixo.jsp" />
             <div style="float:left; margin-left: 20px;">
                 <%
                     long hora = session.getCreationTime();
@@ -23,7 +22,7 @@
                     String data_hora = formato.format(agora);
                 %>
                 <br /><b>Data da consulta: </b><%=data_hora%>
-                <div style="width: 400px; text-align: right;">
+                <div id="consultaCli">
                     <form method="POST" action="consultaOSClienteBD.jsp">
                         <table>
                             <tr>

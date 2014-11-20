@@ -1,7 +1,7 @@
 package dao;
 
 import entidade.Usuario;
-import static java.lang.System.out;
+import java.util.ArrayList;
 import java.util.List;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
@@ -19,24 +19,24 @@ public class UsuarioDao {
         resultado = false;
     }
     
-    public List<Usuario> getListUsuario(String palavra) { 
-        List<Usuario> listUsuario;
+    public ArrayList<Usuario> getListUsuario(String palavra) { 
+        ArrayList<Usuario> listUsuario;
         
         Session s = SessionFactoryUtil.openSession(SessionFactoryUtil.openConnection());
         s.beginTransaction();
         
         Criteria cNome = s.createCriteria(Usuario.class);
-        cNome.add(Restrictions.eq("nome", palavra));
+        cNome.add(Restrictions.ilike("nome", "%"+palavra+"%"));
         
-        List<Usuario> listUsuarioNome = (List<Usuario>) cNome.list();
+        ArrayList<Usuario> listUsuarioNome = (ArrayList<Usuario>) cNome.list();
         if (listUsuarioNome.isEmpty()) {
             
             listUsuario = null;
             
             Criteria cDoc = s.createCriteria(Usuario.class);
-            cDoc.add(Restrictions.eq("cpfCnpj", palavra));
+            cDoc.add(Restrictions.ilike("cpfCnpj", "%"+palavra+"%"));
 
-            List<Usuario> listUsuarioDoc = (List<Usuario>) cDoc.list();
+            ArrayList<Usuario> listUsuarioDoc = (ArrayList<Usuario>) cDoc.list();
             if (listUsuarioDoc.isEmpty()){
                 listUsuario = null;
             } else {
@@ -49,10 +49,6 @@ public class UsuarioDao {
 
         s.close();
         
-        for(Usuario u : listUsuario){
-            out.println(u.getNome());
-        }
-        
         return listUsuario;
     }
 
@@ -63,7 +59,49 @@ public class UsuarioDao {
         s.beginTransaction();
         
         Criteria c = s.createCriteria(Usuario.class);
-        c.add(Restrictions.eq("id_usuario", id));
+        c.add(Restrictions.eq("idUsuario", id));
+        
+        List<Usuario> lstUsuario = (List<Usuario>) c.list();
+
+        if (lstUsuario.isEmpty()) {
+            usuario = null;
+        } else {
+            usuario = lstUsuario.get(0);
+        }
+
+        s.close();
+        return usuario;
+    }
+    
+    public Usuario getUsuarioDoc(String doc) {
+        Usuario usuario = null;
+        
+        Session s = SessionFactoryUtil.openSession(SessionFactoryUtil.openConnection());
+        s.beginTransaction();
+        
+        Criteria c = s.createCriteria(Usuario.class);
+        c.add(Restrictions.eq("cpfCnpj", doc));
+        
+        List<Usuario> lstUsuario = (List<Usuario>) c.list();
+
+        if (lstUsuario.isEmpty()) {
+            usuario = null;
+        } else {
+            usuario = lstUsuario.get(0);
+        }
+
+        s.close();
+        return usuario;
+    }
+        
+    public Usuario getUsuarioLogin(String nomeUsuario) {
+        Usuario usuario = null;
+        
+        Session s = SessionFactoryUtil.openSession(SessionFactoryUtil.openConnection());
+        s.beginTransaction();
+        
+        Criteria c = s.createCriteria(Usuario.class);
+        c.add(Restrictions.eq("nomeUsuario", nomeUsuario));
         
         List<Usuario> lstUsuario = (List<Usuario>) c.list();
 
